@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient-x{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-posiion: 0% 50%;
+  }
+}
+
+.animate-gradient-x{
+  background-size: 200% 200%;
+  animation: gradient-x 5s ease infinite;
+}
+
+.l-container{
+  @apply flex flex-col h-screen bg-gradient-to-r from-slate-400 via-slate-600 to-slate-800 animate-gradient-x justify-center items-center
+}
